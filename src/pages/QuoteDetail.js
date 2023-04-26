@@ -6,12 +6,20 @@ import Comments from "../components/comments/Comments";
 const DUMMY_QUOTES = [
   {
     id: "q1",
-    author: "Me",
-    text: "Learning React is fun!",
+    author: "Nelson Mandela",
+    text: "The greatest glory in living lies not in never falling, but in rising every time we fall.",
   },
-  { id: "q2", author: "Bata", text: "Learning English is amusing!" },
+  {
+    id: "q2",
+    author: "Benjamin Franklin",
+    text: "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+  },
+  {
+    id: "q3",
+    author: "Albert Einstein",
+    text: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+  },
 ];
-
 const QuoteDetail = () => {
   const params = useParams();
 
