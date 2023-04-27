@@ -4,7 +4,7 @@ import QuoteDetail from "./pages/QuoteDetail";
 import NewQuote from "./pages/NewQuote";
 import Layout from "./components/layout/Layuot";
 import NotFound from "./pages/NotFound";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const DUMMY_QUOTES = [
   {
@@ -25,7 +25,14 @@ const DUMMY_QUOTES = [
 ];
 
 function App() {
-  const [allQuotes, setAllQuotes] = useState(DUMMY_QUOTES);
+  const [allQuotes, setAllQuotes] = useState(() => {
+    const saved = localStorage.getItem("quotes");
+    return JSON.parse(saved) || DUMMY_QUOTES;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("quotes", JSON.stringify(allQuotes));
+  }, [allQuotes]);
 
   const addNewQuote = (newQuote) => {
     setAllQuotes((prev) => {

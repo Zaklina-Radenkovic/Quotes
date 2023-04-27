@@ -16,9 +16,22 @@ const QuoteForm = (props) => {
     const enteredAuthor = authorInputRef.current.value;
     const enteredText = textInputRef.current.value;
 
+    localStorage.setItem(
+      "quotes",
+      JSON.stringify({
+        enteredAuthor,
+        enteredText,
+        id: new Date().toISOString(),
+      })
+    );
+
     // optional: Could validate here
 
-    props.onAddQuote({ author: enteredAuthor, text: enteredText });
+    props.onAddQuote({
+      author: enteredAuthor,
+      text: enteredText,
+      id: new Date().toISOString(),
+    });
   }
 
   //checking if form is in focus

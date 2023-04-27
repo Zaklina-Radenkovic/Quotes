@@ -22,7 +22,7 @@ const DUMMY_QUOTES = [
 ];
 const QuoteDetail = () => {
   const params = useParams();
-  console.log(params);
+  // console.log(params);
   //we want to show text depending on id
   const quote = DUMMY_QUOTES.find((q) => q.id === params.quoteId); //returns object
   // console.log(quote);
