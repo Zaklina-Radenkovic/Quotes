@@ -30,7 +30,7 @@ const QuoteList = (props) => {
     // history.push("/quotes?sort=asc");
 
     // making dynamically
-    history.push("/quotes?sort=" + (isSortAscending ? "desc" : "asc"));
+    history.push("/Quotes?sort=" + (isSortAscending ? "desc" : "asc"));
   };
 
   return (

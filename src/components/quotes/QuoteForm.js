@@ -22,10 +22,10 @@ const QuoteForm = (props) => {
   }
 
   //checking if form is in focus
-  const formFocusedHandler = () => {
-    console.log("focus");
-    setIsEntering(true);
-  };
+  // const formFocusedHandler = () => {
+  //   console.log("focus");
+  //   setIsEntering(true);
+  // };
 
   return (
     <>
@@ -34,7 +34,7 @@ const QuoteForm = (props) => {
         <form
           className={classes.form}
           onSubmit={submitFormHandler}
-          onFocus={formFocusedHandler}
+          // onFocus={formFocusedHandler}
         >
           {props.isLoading && (
             <div className={classes.loading}>

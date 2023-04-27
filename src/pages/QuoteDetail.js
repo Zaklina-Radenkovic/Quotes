@@ -22,13 +22,13 @@ const DUMMY_QUOTES = [
 ];
 const QuoteDetail = () => {
   const params = useParams();
-
+  console.log(params);
   //we want to show text depending on id
   const quote = DUMMY_QUOTES.find((q) => q.id === params.quoteId); //returns object
-  console.log(quote);
+  // console.log(quote);
 
   //if there is no quote
-  if (!quote) return <p>No quoutes</p>;
+  if (!quote) return <p>No quotes</p>;
 
   return (
     <section>

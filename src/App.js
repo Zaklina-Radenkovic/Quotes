@@ -37,9 +37,9 @@ function App() {
     <Layout>
       <Switch>
         <Route path="/" exact>
-          <Redirect to="/quotes" />
+          <Redirect to="/Quotes" />
         </Route>
-        <Route path="/quotes" exact>
+        <Route path="/Quotes" exact>
           <AllQuotes quotes={allQuotes} />
         </Route>
         <Route path="/quotes/:quoteId">
